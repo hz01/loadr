@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Loadr – Download Manager</title>
+<meta name="description" content="Big files, done fast. Up to 32 connections per file, downloads that survive quitting and crashes, and speed limits you can change mid-download. No account, no tracking.">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="img/icon-64.png">
+<link rel="apple-touch-icon" href="img/icon-256.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <a class="brand" href=""><img src="img/icon-64.png" alt="" width="28" height="28">Loadr</a>
+  <nav><a href="support/">Support</a><a href="privacy/">Privacy</a><a href="legal/">Legal</a></nav>
+</header>
+<main>
+<section class="hero">
+  <img class="appicon" src="img/icon-256.png" alt="" width="112" height="112">
+  <h1>Loadr makes big downloads fast and safe.</h1>
+  <p class="lead">It splits each file into pieces, fetches them over many connections at once and puts them back together byte for byte. Quit the app, lose your Wi-Fi or restart your Mac: every download picks up exactly where it stopped.</p>
+  <p class="soon">Coming soon to the Mac App Store · macOS 11 or later · Apple silicon and Intel</p>
+</section>
+<figure class="shot"><picture><source srcset="img/main-dark.webp" media="(prefers-color-scheme: dark)"><img src="img/main-light.webp" alt="The Loadr window with downloads in progress" width="1000" height="616"></picture></figure>
+<section class="split">
+  <div>
+    <h2>See every connection at work</h2>
+    <p>Big files, done fast. Up to 32 connections per file, downloads that survive quitting and crashes, and speed limits you can change mid-download. No account, no tracking.</p>
+  </div>
+  <figure><picture><source srcset="img/window-dark.webp" media="(prefers-color-scheme: dark)"><img src="img/window-light.webp" alt="A download with its speed graph and connections" width="560" height="444"></picture></figure>
+</section>
+<section class="cards">
+<section class="card"><h3>Fast</h3><ul><li>Up to 32 connections per file, 16 by default.</li><li>Connections that finish early take over the biggest piece still left, so the last few percent don't crawl.</li><li>Change the number of connections while a file is downloading.</li></ul></section>
+<section class="card"><h3>Safe</h3><ul><li>Progress only counts bytes that are really on disk, and it is saved every second.</li><li>Resumes after quitting, sleep, a lost connection or a crash.</li><li>Before resuming, Loadr checks that the file on the server hasn't changed. If it has, it starts over cleanly instead of giving you a broken file.</li><li>Failed connections retry on their own, and a server that allows fewer connections simply gets fewer.</li></ul></section>
+<section class="card"><h3>In control</h3><ul><li>A queue that runs as many downloads at once as you like.</li><li>Speed limits for everything, or for one file in the middle of its download.</li><li>A schedule: start the queue at night and stop it in the morning.</li><li>Pauses on battery power and keeps your Mac awake while files download, if you like.</li><li>Paste a whole list of links, import them from a text file, and tick the ones you want.</li><li>Optional: notice download links you copy (off until you turn it on).</li></ul></section>
+<section class="card"><h3>Files you can trust</h3><ul><li>Paste a SHA-256 checksum and Loadr verifies the finished file. When the server publishes one, it checks automatically.</li><li>Add mirror addresses: connections spread across them, and a failing mirror is skipped.</li><li>Downloads that need a sign-in work too: user name and password, or your own request headers.</li><li>Checks the free space on your disk before it starts, and says so clearly when it runs out.</li></ul></section>
+<section class="card"><h3>Clear</h3><ul><li>A download window with a live speed graph and a bar for every connection.</li><li>Downloads sorted by type: compressed files, documents, music, video, programs and images.</li><li>Search your downloads by name or address.</li><li>A notification when a download finishes, and progress on the Dock icon.</li><li>Works with VoiceOver.</li></ul></section>
+<section class="card"><h3>Make it yours</h3><ul><li>Seven hand-made looks: Studio, Studio Dark, Gel, Daylight, Midnight, Ocean and Sunrise. Switch in one click.</li><li>In English, German, Spanish, French, Japanese and Chinese.</li></ul></section>
+<section class="card"><h3>Light and private</h3><ul><li>A native app that starts instantly and uses little memory.</li><li>No account, no ads, no tracking. Loadr collects no data at all.</li><li>Uses your system proxy settings.</li><li>Universal: runs natively on Apple silicon and Intel Macs.</li></ul></section>
+</section>
+<p class="note">Loadr downloads direct links to files over HTTP and HTTPS. It does not download from video streaming sites, torrents or FTP. A server that doesn't support resuming gets a single connection, and that download starts over if it is interrupted.</p>
+</main>
+<footer>
+  <span>© 2026 Flexkit</span>
+  <nav><a href="support/">Support</a><a href="privacy/">Privacy</a><a href="legal/">Legal</a></nav>
+</footer>
+</body>
+</html>
