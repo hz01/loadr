@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Loadr – Download Manager</title>
-<meta name="description" content="Big files, done fast. Up to 32 connections per file, downloads that survive quitting and crashes, and speed limits you can change mid-download. No account, no tracking.">
+<title>Loadr – Download Manager for Windows, macOS and Linux</title>
+<meta name="description" content="Loadr downloads big files fast over many connections and never loses progress. No account, no tracking.">
 <meta name="color-scheme" content="light dark">
 <link rel="icon" href="img/icon-64.png">
 <link rel="apple-touch-icon" href="img/icon-256.png">
@@ -15,31 +15,110 @@
   <a class="brand" href=""><img src="img/icon-64.png" alt="" width="28" height="28">Loadr</a>
   <nav><a href="support/">Support</a><a href="privacy/">Privacy</a><a href="legal/">Legal</a></nav>
 </header>
-<main>
+<main class="home">
 <section class="hero">
-  <img class="appicon" src="img/icon-256.png" alt="" width="112" height="112">
-  <h1>Loadr makes big downloads fast and safe.</h1>
-  <p class="lead">It splits each file into pieces, fetches them over many connections at once and puts them back together byte for byte. Quit the app, lose your Wi-Fi or restart your Mac: every download picks up exactly where it stopped.</p>
-  <p class="soon">Coming soon to the Mac App Store · macOS 11 or later · Apple silicon and Intel</p>
-</section>
-<figure class="shot"><picture><source srcset="img/main-dark.webp" media="(prefers-color-scheme: dark)"><img src="img/main-light.webp" alt="The Loadr window with downloads in progress" width="1000" height="616"></picture></figure>
-<section class="split">
-  <div>
-    <h2>See every connection at work</h2>
-    <p>Big files, done fast. Up to 32 connections per file, downloads that survive quitting and crashes, and speed limits you can change mid-download. No account, no tracking.</p>
+  <div class="glow" aria-hidden="true"></div>
+  <img class="appicon" src="img/icon-256.png" alt="" width="104" height="104">
+  <p class="eyebrow">Download manager for Windows, macOS and Linux</p>
+  <h1>Big files, <span class="grad">done fast.</span></h1>
+  <p class="lead">Loadr splits every file into pieces, fetches them over many connections at once and
+  puts them back together byte for byte. Close the app, lose your Wi-Fi, restart: it picks up exactly where it stopped.</p>
+  <div class="ctas">
+    <a class="btn primary" href="#get">Get Loadr</a>
+    <a class="btn" href="#features">See what it does</a>
   </div>
-  <figure><picture><source srcset="img/window-dark.webp" media="(prefers-color-scheme: dark)"><img src="img/window-light.webp" alt="A download with its speed graph and connections" width="560" height="444"></picture></figure>
+  <div class="stage">
+    <picture class="main-shot"><source srcset="img/main-dark.webp" media="(prefers-color-scheme: dark)"><img src="img/main-light.webp" alt="The Loadr window with downloads in progress" width="1000" height="616" loading="eager" decoding="async"></picture>
+    <picture class="float-shot"><source srcset="img/compact-dark.webp" media="(prefers-color-scheme: dark)"><img src="img/compact-light.webp" alt="A download in progress over 16 connections" width="500" height="246" loading="eager" decoding="async"></picture>
+  </div>
 </section>
+
+<section class="stats" aria-label="At a glance">
+  <div><strong>32</strong><span>connections per file</span></div>
+  <div><strong>0</strong><span>bytes lost when it stops</span></div>
+  <div><strong>~25&nbsp;MB</strong><span>of memory</span></div>
+  <div><strong>0</strong><span>trackers, ads or accounts</span></div>
+</section>
+
+<section class="row" id="features">
+  <div class="text">
+    <p class="kicker">Speed</p>
+    <h2>See every connection at work.</h2>
+    <p>A live speed graph, a bar for every connection, and a speed limit you can set in the middle of a download.
+    Connections that finish early take over the biggest piece left, so the last few percent don't crawl.</p>
+  </div>
+  <picture class="shot"><source srcset="img/window-dark.webp" media="(prefers-color-scheme: dark)"><img src="img/window-light.webp" alt="A download&#x27;s speed graph and its 16 connections" width="560" height="444" loading="lazy" decoding="async"></picture>
+</section>
+
+<section class="row flip">
+  <div class="text">
+    <p class="kicker">Reliability</p>
+    <h2>Never lose a download.</h2>
+    <p>Progress only counts bytes that are really on disk, saved every second. Quit, sleep, lose the
+    connection or crash: Loadr resumes, and checks the file on the server hasn't changed first.</p>
+  </div>
+  <picture class="shot"><source srcset="img/done-dark.webp" media="(prefers-color-scheme: dark)"><img src="img/done-light.webp" alt="A finished download with Open and Show in Folder" width="550" height="345" loading="lazy" decoding="async"></picture>
+</section>
+
+<section class="row">
+  <div class="text">
+    <p class="kicker">Convenience</p>
+    <h2>Paste one link or a hundred.</h2>
+    <p>Paste a list, import a text file, or let the browser extension hand downloads over with their cookies.
+    Add mirrors, a checksum or a sign-in when a download needs them.</p>
+  </div>
+  <picture class="shot"><source srcset="img/add-dark.webp" media="(prefers-color-scheme: dark)"><img src="img/add-light.webp" alt="Adding three links at once" width="520" height="434" loading="lazy" decoding="async"></picture>
+</section>
+
+<section class="systems">
+  <p class="kicker">Native everywhere</p>
+  <h2>Looks at home on your system.</h2>
+  <p class="sub">Each system gets its own hand-made looks, light and dark. Switch in one click.</p>
+  <div class="os">
+    <input type="radio" name="os" id="os-windows" aria-label="Windows" checked><input type="radio" name="os" id="os-mac" aria-label="macOS"><input type="radio" name="os" id="os-linux" aria-label="Linux">
+    <div class="tabs"><label for="os-windows">Windows</label><label for="os-mac">macOS</label><label for="os-linux">Linux</label></div>
+    <div class="panes"><figure class="pane pane-windows"><picture><source srcset="img/os-windows-dark.webp" media="(prefers-color-scheme: dark)"><img src="img/os-windows-light.webp" alt="Loadr on Windows" width="900" height="519" loading="lazy" decoding="async"></picture><figcaption>Mist and Graphite, made for Windows 11: flat surfaces, crisp corners and the system font. Plus Daylight, Midnight, Ocean and Sunrise everywhere.</figcaption></figure><figure class="pane pane-mac"><picture><source srcset="img/os-mac-dark.webp" media="(prefers-color-scheme: dark)"><img src="img/os-mac-light.webp" alt="Loadr on macOS" width="900" height="519" loading="lazy" decoding="async"></picture><figcaption>Studio, Studio Dark and Gel, with the window buttons where your hands expect them. Plus Daylight, Midnight, Ocean and Sunrise everywhere.</figcaption></figure><figure class="pane pane-linux"><picture><source srcset="img/os-linux-dark.webp" media="(prefers-color-scheme: dark)"><img src="img/os-linux-light.webp" alt="Loadr on Linux" width="900" height="519" loading="lazy" decoding="async"></picture><figcaption>Pebble and Charcoal, in the style of GNOME, with a tray icon on every desktop. Plus Daylight, Midnight, Ocean and Sunrise everywhere.</figcaption></figure></div>
+  </div>
+</section>
+
 <section class="cards">
-<section class="card"><h3>Fast</h3><ul><li>Up to 32 connections per file, 16 by default.</li><li>Connections that finish early take over the biggest piece still left, so the last few percent don't crawl.</li><li>Change the number of connections while a file is downloading.</li></ul></section>
-<section class="card"><h3>Safe</h3><ul><li>Progress only counts bytes that are really on disk, and it is saved every second.</li><li>Resumes after quitting, sleep, a lost connection or a crash.</li><li>Before resuming, Loadr checks that the file on the server hasn't changed. If it has, it starts over cleanly instead of giving you a broken file.</li><li>Failed connections retry on their own, and a server that allows fewer connections simply gets fewer.</li></ul></section>
-<section class="card"><h3>In control</h3><ul><li>A queue that runs as many downloads at once as you like.</li><li>Speed limits for everything, or for one file in the middle of its download.</li><li>A schedule: start the queue at night and stop it in the morning.</li><li>Pauses on battery power and keeps your Mac awake while files download, if you like.</li><li>Paste a whole list of links, import them from a text file, and tick the ones you want.</li><li>Optional: notice download links you copy (off until you turn it on).</li></ul></section>
-<section class="card"><h3>Files you can trust</h3><ul><li>Paste a SHA-256 checksum and Loadr verifies the finished file. When the server publishes one, it checks automatically.</li><li>Add mirror addresses: connections spread across them, and a failing mirror is skipped.</li><li>Downloads that need a sign-in work too: user name and password, or your own request headers.</li><li>Checks the free space on your disk before it starts, and says so clearly when it runs out.</li></ul></section>
-<section class="card"><h3>Clear</h3><ul><li>A download window with a live speed graph and a bar for every connection.</li><li>Downloads sorted by type: compressed files, documents, music, video, programs and images.</li><li>Search your downloads by name or address.</li><li>A notification when a download finishes, and progress on the Dock icon.</li><li>Works with VoiceOver.</li></ul></section>
-<section class="card"><h3>Make it yours</h3><ul><li>Seven hand-made looks: Studio, Studio Dark, Gel, Daylight, Midnight, Ocean and Sunrise. Switch in one click.</li><li>In English, German, Spanish, French, Japanese and Chinese.</li></ul></section>
-<section class="card"><h3>Light and private</h3><ul><li>A native app that starts instantly and uses little memory.</li><li>No account, no ads, no tracking. Loadr collects no data at all.</li><li>Uses your system proxy settings.</li><li>Universal: runs natively on Apple silicon and Intel Macs.</li></ul></section>
+<article class="card"><svg class="glyph" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8z"/></svg><h3>Fast</h3><ul><li>Up to 32 connections per file, 16 by default.</li><li>Connections that finish early take over the biggest piece left, so the last few percent don't crawl.</li><li>Change the number of connections while a file downloads.</li></ul></article>
+<article class="card"><svg class="glyph" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6l-8-3z"/><path d="m8.5 12 2.5 2.5 4.5-5"/></svg><h3>Safe</h3><ul><li>Progress only counts bytes really on disk, saved every second.</li><li>Resumes after closing the app, sleep, lost Wi-Fi or a crash.</li><li>Checks the file on the server hasn't changed before resuming.</li></ul></article>
+<article class="card"><svg class="glyph" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h10M18 6h2M4 12h4M12 12h8M4 18h12"/><circle cx="16" cy="6" r="2"/><circle cx="10" cy="12" r="2"/><circle cx="18" cy="18" r="2"/></svg><h3>In control</h3><ul><li>A queue that runs as many downloads at once as you like.</li><li>Speed limits for everything, or for one file mid-download.</li><li>A schedule, and a pause when you're on battery.</li></ul></article>
+<article class="card"><svg class="glyph" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg><h3>Files you can trust</h3><ul><li>SHA-256 check of finished files, automatic when the server publishes one.</li><li>Mirror addresses: a failing mirror is skipped.</li><li>Downloads that need a sign-in, cookies or custom headers.</li></ul></article>
+<article class="card"><svg class="glyph" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg><h3>Clear</h3><ul><li>A live speed graph and a bar for every connection.</li><li>Downloads sorted by type, searchable by name or address.</li><li>Progress on the taskbar or Dock, and a notification when done.</li></ul></article>
+<article class="card"><svg class="glyph" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 1 0 0 18c1.1 0 1.5-.8 1.5-1.6 0-1.4-1.2-1.6-1.2-3 0-.9.7-1.4 1.7-1.4H17a4 4 0 0 0 4-4c0-4.4-4-8-9-8z"/><circle cx="7.5" cy="11" r="1"/><circle cx="10" cy="7" r="1"/><circle cx="15" cy="7.5" r="1"/></svg><h3>Yours</h3><ul><li>Eleven hand-made looks, each system with its own.</li><li>English, German, Spanish, French, Japanese and Chinese.</li><li>Works with screen readers.</li></ul></article>
 </section>
-<p class="note">Loadr downloads direct links to files over HTTP and HTTPS. It does not download from video streaming sites, torrents or FTP. A server that doesn't support resuming gets a single connection, and that download starts over if it is interrupted.</p>
+
+<section class="privacy-band">
+  <svg class="glyph" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6l-8-3z"/><path d="m8.5 12 2.5 2.5 4.5-5"/></svg>
+  <div>
+    <h2>Private by design.</h2>
+    <p>No account, no ads, no analytics. Loadr collects no data at all, and neither does this website:
+    no cookies, no scripts, no third-party requests.</p>
+    <a href="privacy/">Read the privacy policy &rarr;</a>
+  </div>
+</section>
+
+<section class="faq">
+  <h2>Questions</h2>
+  <details><summary>Which systems does it run on?</summary><p>Windows 10 and 11, macOS 11 or later (Apple silicon and Intel) and Linux. It is a native app on each, with looks made for that system.</p></details>
+<details><summary>How much does it cost?</summary><p>Loadr will be a paid app, bought once in the Microsoft Store and the Mac App Store. No subscription, no account.</p></details>
+<details><summary>What can it download?</summary><p>Direct links to files over HTTP and HTTPS. It does not download from video streaming sites, torrents or FTP.</p></details>
+<details><summary>Does it work with my browser?</summary><p>Yes: a small extension for Chrome, Edge, Brave, Vivaldi and Firefox hands downloads to Loadr with their cookies, so downloads that need you to be signed in work too.</p></details>
+<details><summary>What does it know about me?</summary><p>Nothing. Loadr has no analytics, no crash reporting service and no account. The only traffic is the downloads you start. Read the <a href="privacy/">privacy policy</a>.</p></details>
+</section>
+
+<section class="get" id="get">
+  <img src="img/icon-256.png" alt="" width="72" height="72">
+  <h2>Coming soon.</h2>
+  <p>Loadr is on its way to the Microsoft Store and the Mac App Store, with a Linux edition to follow.</p>
+  <div class="ctas">
+    <span class="btn store">Microsoft Store <small>coming soon</small></span>
+    <span class="btn store">Mac App Store <small>coming soon</small></span>
+  </div>
+  <p class="small">Questions in the meantime? <a href="support/">Contact support</a>.</p>
+</section>
 </main>
 <footer>
   <span>© 2026 Flexkit</span>
